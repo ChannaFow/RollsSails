@@ -1,0 +1,13 @@
+<h1 id="header">Menu</h1>
+<div id="content">
+	Shiiiit goes here
+</div>
+<div id="footer">
+	<a target="_blank" href="http://sailsjs.com" class="copyright">Built with Sails.js</a>
+</div>
+<script type="text/javascript">
+	var rollsApp = angular.module('RollsApp', ['ngResource']);
+	rollsApp.factory('Menu', ['$resource', function($resource){
+		return $resource('menu/:id', { id:'@id' });
+	}]);
+</script>
